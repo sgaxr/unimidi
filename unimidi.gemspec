@@ -7,4 +7,6 @@ Gem::Specification.new do |s|
     s.homepage    = 'https://github.com/sgaxr/unimidi'
     s.license     = 'Apache 2' 
     s.description = "Copy of unimidi gem with a gemspec. Requires sgaxr version of alsa-rawmidi."
+
+    s.add_dependency "alsa-rawmidi"
 end
