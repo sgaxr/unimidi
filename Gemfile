@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+
 group :test do
   gem "minitest", "~> 5.5", ">= 5.5.0"
   gem "mocha", "~> 1.1", ">= 1.1.0"
@@ -7,7 +10,8 @@ group :test do
   gem "shoulda-context", "~> 1.2", ">= 1.2.1"
 end
 
-gem "alsa-rawmidi", "~> 0.3", ">= 0.3.1", require: false # linux
+gem "alsa-rawmidi", github: "sgaxr/alsa-rawmidi", require: false
+# gem "alsa-rawmidi", "~> 0.3", ">= 0.3.1", require: false # linux
 gem "ffi-coremidi", "~> 0.3", ">= 0.3.5", require: false # osx
 gem "midi-jruby", "~> 0.1", ">= 0.1.4", require: false # jruby
 gem "midi-winmm", "~> 0.1", ">= 0.1.10", require: false # windows
